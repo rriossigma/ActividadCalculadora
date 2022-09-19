@@ -1,23 +1,30 @@
-def suma(a,b):
-    print(a + b)
+class calculadora:
+    
+    def __init__(self, a, b):
+        self.a = float(a)
+        self.b = float(b)
+        
+    def suma(self):
+        print(self.a + self.b)
 
-def resta(a,b):
-    print(a- b)
+    def resta(self):
+         print(self.a- self.b)
 
-def multiplicacion(a,b):
-    print(a*b)
+    def multiplicacion(self):
+       print(self.a*self.b)
 
-def division(a,b):
-    if (b == 0):
-        print("No se puede dividir entre cero")
-    else:
-        print(a/b)
+    def division(self):
+        if (self.b == 0):
+           print("No se puede dividir entre cero")
+        else:
+           print(self.a/self.b)
     
 
 a = float(input("Ingresa el primer valor: "))
 b=  float(input("Ingresa el segundo valor: "))
 
-suma(a,b)
-resta(a,b)
-multiplicacion(a,b)
-division(a,b)
+calculadora  = calculadora(a,b)
+calculadora.suma()
+calculadora.resta()
+calculadora.multiplicacion()
+calculadora.division()
